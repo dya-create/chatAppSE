@@ -2,7 +2,7 @@
 
 EZScrumEZGo: Chat App Project
 
-Names: Diya, Paula, Steven
+Names: Diya, Paula, Steven, Mariela
 
 Description:
 
