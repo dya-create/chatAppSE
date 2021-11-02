@@ -11,6 +11,8 @@ Needed dependance/files:
 node.js
 react 
 
+npm install socket.io
+
 Credit:
 
 [based on thie website guide ](https://flexiple.com/react/build-a-powerful-chat-application-using-react-hooks/#section1)
