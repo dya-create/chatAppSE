@@ -9,8 +9,11 @@ Description:
 
 Needed dependance/files:
 node.js
-react 
+express                           //will we be using this for this project?
+npm install express-handlebars    //will we be using this for this project?
+npm install -g nodemon    
 
+react 
 npm install socket.io
 
 Credit:
