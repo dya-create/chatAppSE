@@ -1,10 +1,24 @@
 body {
     font-family: sans-serif;
+
+    text-align:center;
 }
 
 h1 {    
-    text-align: center;
     margin-top: 100px;
     font-size: 40px;
     color:darkslategrey;
 }
+
+.split-para{ 
+    display:block;
+    margin-top: 0em;
+    margin-bottom: 0em;}
+    
+.split-para span{ 
+    display:block;
+    float:right;
+    width:70%;
+    margin-left:-30em;
+    margin-top: 0em;
+    margin-bottom: 0em;}
