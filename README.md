@@ -1,6 +1,6 @@
-# chatAppSE
+# ChatAppSE
 
-**EZScrumEZGo: Chat App Project
+**EZScrumEZGo: Chat App Project**
 
 **Names:** Diya, Paula, Steven, Mariela, Adrian
 
