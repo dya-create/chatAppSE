@@ -29,4 +29,4 @@ cloud hosting using Azure.
 
 [How to use react github](https://github.com/facebook/create-react-app)
 
-[CSS style] (https://codepen.io/ManalNasir/pen/gOLLvxM)
+[CSS style](https://codepen.io/ManalNasir/pen/gOLLvxM)
