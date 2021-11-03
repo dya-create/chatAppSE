@@ -1,5 +1,5 @@
 {
-    "name": "EZMMessage",
+    "name": "EZMessage",
     "version": "1.0.0",
     "description": "Names: Steve, Diya, Paula, Adrian, Mariela",
     "main": "index.js",
@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dya-create/health-insurance-riskcalulator.git"
+        "url": "git+https://github.com/dya-create/chatAppSE.git"
     },
     "author": "EzscrumEzgo",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/dya-create/health-insurance-riskcalulator/issues"
+        "url": "https://github.com/dya-create/chatAppSE.git/issues"
     },
-    "homepage": "https://github.com/dya-create/health-insurance-riskcalulator#readme",
+    "homepage": "https://github.com/dya-create/chatAppSE.git#readme",
     "dependencies": {
         "body-parser": "^1.19.0",
         "express": "^4.17.1",
