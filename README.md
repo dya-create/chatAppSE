@@ -28,3 +28,5 @@ cloud hosting using Azure.
 [Based on thie website guide ](https://flexiple.com/react/build-a-powerful-chat-application-using-react-hooks/#section1)
 
 [How to use react github](https://github.com/facebook/create-react-app)
+
+[CSS style](https://codepen.io/ManalNasir/pen/gOLLvxM)
