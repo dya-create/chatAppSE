@@ -8,16 +8,16 @@
     </head>
 
     <body>
-        <div class="container">
-            <class class="titular">		
-                
-                <button class="btntop" id="login-button" onClick="login()">Login</button>
-                <p class="tagline">EZMessage</p> </class>
-                
-                <button class="btn">Get Started</button>
-            </div>
-            <div class="context">
-                <br/><br/>
+    <div class="container">
+        <class class="titular">		
+            
+            <button class="btntop" href="/login">Login</button>
+            <p class="tagline">EZMessage</p> </class>
+            
+            <button class="btn">Get Started</button>
+        </div>
+        <div class="context">
+            <br/><br/>
 
                 <center><p class="line"></p></center>
                 <p>An application that will allow a user to be able to log in and out,
@@ -58,13 +58,4 @@
             </div>
         </div>
     </body>
-    <script>
-        function login(e) {
-            e.preventDefault();
-            axios.post('/login')
-                .then(response => {
-                    console.log("Login redirect response: ", response);
-                });
-        }
-    </script>
 </html>
