@@ -28,6 +28,10 @@ app.get('/credits', (req, res) => {
   res.sendFile(__dirname + '/views/credits.html')
 })
 
+app.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/views/login.html')
+})
+
 /*  
 io.on('connection', (socket) => {
   console.log('User is connected sucessfully')
