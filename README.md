@@ -32,4 +32,6 @@ cloud hosting using Azure.
 
 [CSS style landing page](https://codepen.io/ManalNasir/pen/gOLLvxM)
 
+[CSS style login page](https://speckyboy.com/login-pages-html5-css/)
+
 Link to Website: https://ezmessage.azurewebsites.net/
