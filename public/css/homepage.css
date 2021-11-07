@@ -22,7 +22,7 @@ body {
 	color: #FFF;
 	font-family: Times New Roman;
 	position: absolute;
-  margin-top: 200px;
+  	margin-top: 200px;
  	left: 50%;
  	transform: translate(-50%, -50%);
 	animation: effect 2s linear infinite; 
@@ -46,8 +46,8 @@ body {
 	font-family: Bahnschrift;
 	position: absolute;
 	margin-top: 210px;;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  	left: 50%;
+  	transform: translate(-50%, -50%);
 	text-shadow: 1px 1px 4px #000000;
 }
 
@@ -59,11 +59,11 @@ body {
 	border: 2px solid white;
 	border-radius: 5px;
 	position: absolute;
-  top: 8%;
-  right: 1%;
-  transform: translate(-50%, -50%);
+  	top: 8%;
+  	right: 1%;
+  	transform: translate(-50%, -50%);
 	padding: 8px 25px;
-  cursor: pointer;
+  	cursor: pointer;
 	background-color: transparent;
 }
 
@@ -81,17 +81,17 @@ body {
 	border: none;
 	border-radius: 5px;
 	position: absolute;
-  margin-top: 450px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  	margin-top: 450px;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
 	padding: 12px 25px;
-  cursor: pointer;
+  	cursor: pointer;
 	background-color: rgb(0,35,51);
 }
 
 .titular .bg {
 	width: 100%; 
-	height: 100%;
+	height: 100vh;
 	opacity: 70%;
 }
 
@@ -99,7 +99,7 @@ body {
 .context {
     width: 100%;
     position: absolute;
-    top: 1000px;   
+    top: 800px;   
 }
 
 .context h1{
@@ -112,17 +112,18 @@ body {
 
 .context p {
 	text-align: center;
-  color: #FFF;
-  font-size: 20px;
+	color: #FFF;
+  	font-size: 20px;
 	font-family: Bahnschrift;
 }
 
 .context .line {
+	text-align: center;
 	border-radius: 25px;
  	background: rgb(0,255,132);
-  padding: 6px;
- 	width: 1000px;
- 	height: 3px;
+  	padding: 6px;
+ 	width: 100px;
+ 	height: 5px;
 }
 
 

@@ -1,59 +1,82 @@
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <title>EZMessage Home Page</title>
 
-        
-        <link rel="stylesheet" href="/css/homepage.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EZMessage Home Page</title>
 
-    <body>
+    <link rel="stylesheet" href="/css/homepage.css">
+</head>
+
+<body>
     <div class="container">
-        <class class="titular">		
-            
-            <div class="buttoncenter">
-                <!-- make the button bigger and maybe maek them lookin simliar to the other one in form.html-->
-            <button onclick="document.location='/login'">Login</button>
-    </div> 
-            
-            
-            <button class="btntop" href="/login">Login</button>
-            <p class="tagline">EZMessage</p> </class>
-            
-            <button class="btn">Get Started</button>
+
+        <div class="titular">
+
+            <!-- credit: https://www.dreamstime.com/stock-photo-friends-texting-smartphones-young-people-looking-down-cellular-phone-teenagers-leaning-wall-their-concepts-image61664362 -->
+
+            <img src="/img/friends-texting.jpg" alt="Students gathered around a table, laughing" class="bg"/>
+
+            <button class="btntop" onclick="window.location.href='/login'">Login</button>
+            <p class="tagline">EZMessage</p>
+            <p class="subtitle">A new way to message</p>
+        
+
+            <button class="btn" onclick="window.location.href='/signup'">Sign up</button>
+
         </div>
+
+
         <div class="context">
-            <br/><br/>
+            <h1>About The App and More...</h1>
+            <p class="line"></p>
 
-                <center><p class="line"></p></center>
-                <p>An application that will allow a user to be able to log in and out,
-                    view when other users are online or offline, and send and recieve
-                    messages that will show a time stamp of when it was sent. <br/>Messages that a user will be able to send will include emojis.
-                    A user will be able to create set times to send premade messages
-                    and a user will be able to delete previously sent messages.</p>
-                
-                
-            </div>
-            
-            <div class="area" ></div>
-                <ul class="circles">
-                    <li></li>
-                    <li></li>       
-                </ul>
-            </div >
-            
-            <div class="gallery">
-                <h1>Explore all possibilities...</h1>
-                <div class="grid">
+            <p> An application that will allow a user to be able to log in and out,
+                view when other users are online or offline, and send and recieve
+                messages that will show a time stamp of when it was sent.Messages that a user will be able to send will include emojis. A user will be able to create set times to send premade messages and a user will be able to delete previously sent messages.
+            </p>
 
-                    <img src ="https://image.freepik.com/free-photo/member-log-membership-username-password-concept_53876-101284.jpg"/>
-                    <img src ="https://image.freepik.com/free-vector/send-email-concept_24908-60314.jpg"/>
-                    <img src = "https://image.freepik.com/free-vector/whatsapp-emoji_1057-1534.jpg"/>
-                    <img src ="https://as2.ftcdn.net/v2/jpg/00/79/46/19/500_F_79461939_Xt6FNfV0FnHwiIY8ko5nsrzlno8dQQCo.jpg"/>
-                </div>	
-                <footer class="footer_banner">
-                </footer>
-            </div>
+            
+
         </div>
-    </body>
+        
+
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="gallery">
+            <h1>Explore all possibilities...</h1>
+
+            <button onclick="window.location.href='/credits'">credit</button>
+            
+
+            <div class="grid">
+
+                <img src="/img/phone-signin.jpg" alt="phone-signin">
+                <img src="/img/computer-email.jpg" alt="email">
+                <img src="/img/emojis.jpg" alt="faces">
+                <img src="/img/off-on-status.jpg" alt="status">
+            </div>
+
+            <footer class="footer_banner">
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
 </html>

@@ -6,7 +6,7 @@ const express = require('express')
 const expressHandlebars = require('express-handlebars')
 const app = express()  
 
-app.use(express.static('public'))
+app.use(express.static(__dirname+'/public'))
 
 app.engine('handlebars', expressHandlebars({
   defaultLayout: 'main',
@@ -32,6 +32,14 @@ app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/views/login.html')
 })
 
+app.get('/signup', (req, res) => {
+  res.sendFile(__dirname + '/views/signup.html')
+})
+
+
+
+
+
 /*  
 io.on('connection', (socket) => {
   console.log('User is connected sucessfully')
@@ -41,6 +49,9 @@ io.on('connection', (socket) => {
   })
 })
 */
+
+
+//the port
 app.listen(port, () => console.log(
-  'Started on http://localhost:${port}; ' +
-  'press Ctrl-C to terminate.'))
+  `Express started on http://localhost:${port}; ` +
+  `press Ctrl-C to terminate.`))
