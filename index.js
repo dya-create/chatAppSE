@@ -31,6 +31,8 @@ app.get('/credits', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/views/login.html')
 })
+//going to need a app.post 
+
 
 app.get('/signup', (req, res) => {
   res.sendFile(__dirname + '/views/signup.html')
