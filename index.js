@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000;
 //let server = http.Server(app) 
 //let io = socketIO(server) 
 
-app.get('/homepage', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/homepage.html')
 })
 
