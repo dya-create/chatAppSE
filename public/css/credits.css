@@ -1,45 +1,68 @@
-body {
-    font-family: sans-serif;
-    text-align:center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
-    text-align:center;
+body { 
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .btn {
 	font-size: 18px;
 	font-weight: 400;
 	font-family: Bahnschrift;
-	color: white;
+	color: green;
 	border: none;
 	border-radius: 5px;
 	position: absolute;
-  margin-top: 450px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 	padding: 12px 25px;
   cursor: pointer;
 	background-color: rgb(0,35,51);
 }
 
 h1 {    
-    font-size: 40px;
-    color:darkslategrey;
+  text-align: center;
+  font-size: 40px;
+  color:darkslategrey;
 }
 
-.split-para{ 
-    display:block;
-    margin-top: 0em;
-    margin-bottom: 0em;}
-    
-.split-para span{ 
-    display:block;
-    float:right;
-    width:10%;
-    margin-left:5em;
-    margin-top: 0em;
-    margin-bottom: 0em;}
+
+/* DivTable.com */
+.divTable{
+  margin-left: auto;
+  margin-right: auto;
+	display: table;
+	width: 100%;
+  background-color: rgb(91, 150, 206);
+}
+
+.divTableRow {
+	display: table-row;
+  
+}
+
+.divTableHeading {
+	background-color: rgb(18, 20, 116);
+	display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+	border: 1px solid #0cca0c;
+	display: table-cell;
+	padding: 3px 10px;
+}
+
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
