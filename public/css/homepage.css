@@ -73,7 +73,7 @@ body {
 	cursor: pointer;
 }
 
-.titular .btn {
+.btn {
 	font-size: 18px;
 	font-weight: 700;
 	font-family: Bahnschrift;
@@ -89,7 +89,7 @@ body {
 	background-color: transparent;
 }
 
-.titular .btn:hover {
+.btn:hover {
 	background-color: #FFF;
 	color: rgb(0,35,51);
 	cursor: pointer;
