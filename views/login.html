@@ -10,6 +10,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EzMessage Login</title>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer></script>
+  <script src="/js/login.js"></script>
+
   <link rel="stylesheet" href="/css/login.css">
 </head>
 
@@ -17,20 +22,18 @@
 
   <div class="main">
 
-    <p class="sign" >Sign in</p>
+    <p class="sign">Sign in</p>
 
     <!-- later  this from will need a method="post" -->
-    <form class="form1">
+    <form class="login" id="login">
 
-      <input class="un " type="text" placeholder="Username">
-      <input class="pass" type="password" placeholder="Password">
-      <button class ="submit" onclick="window.location.href='/chat'" text-font="40%" >Submit</button>
-      <!-- <a class="submit" >Sign in</a> -->
-      <p class="forgot" ><a href="#">Forgot Password?</a></p>
+      <input class="un " type="text" name="login" placeholder="Username">
+      <input class="pass" type="password" name="password" placeholder="Password">
+      <button class="submit" text-font="40%">Submit</button>
+      <!-- <button class="submit" onclick="window.location.href='/chat'" text-font="40%">Submit</button>-->
+      <p class="forgot"><a href="#forgot">Forgot Password?</a></p>
 
-      
-    
-    
+
 
     </form>
 

@@ -5,17 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign Up</title>
-    <script src="ENTERFILE.js"></script>
-    <link rel="stylesheet" href="ENTERFILE.css">
-</head>
+    <title>EzMessage Sign up</title>
 
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js" defer></script>
+    <script src="/js/signup.js"></script>
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
 
 <body>
 
-    <h1>Enter some basic information make you account</h1>
+    <div class="main">
+
+        <p class="sign">Sign Up!</p>
+
+        <form class="login" id="signup">
+
+            <input class="un" type="text" name="login" placeholder="Username">
+            <input class="pass" type="password" name="password" placeholder="Password">
+            <button class="submit" text-font="40%">Submit</button>
+
+            <!-- <button class="submit" onclick="window.location.href='/chat'" text-font="40%">Submit</button>-->
+        
+        </form>
+
+    </div>
 
 </body>
-
 
 </html>

@@ -56,6 +56,30 @@ io.on('connection', (socket) => {
 })
 */
 
+/*// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBAPAS9oHu15taZfGh7sjUkw6n0zXKaouY",
+  authDomain: "software-eng-project-6159f.firebaseapp.com",
+  projectId: "software-eng-project-6159f",
+  storageBucket: "software-eng-project-6159f.appspot.com",
+  messagingSenderId: "797548759506",
+  appId: "1:797548759506:web:9ccfb4066427842b3f200b",
+  measurementId: "G-CVVV1HJ9QW"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+*/
+
+
 
 //the port
 app.listen(port, () => console.log(
