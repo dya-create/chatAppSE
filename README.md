@@ -12,16 +12,19 @@ cloud hosting using Azure.
 
 [Sprint 5 Requirements](https://www.lewis.education/?cpsc=44000-fall-2021-001#/activity/final-project-sprint-5)
 
+<br/>
 
 **Needed dependance/files:**
-- node.js
-- react
-- `npm install express --save`    
-- `npm install express-handlebars` <!-- test come-->  
-- `npm install socket.io` <!--note there are two sides when working will socket.io server and client--> 
-<!--might need `npm install socket.io-client` -->
-<!-- `npm install -g nodemon` is needed for test/running for dev   -->
-
+- node.js/express.js
+- ~~react~~
+- `npm install` will install this:
+  - `npm install express --save`    
+  - `npm install express-handlebars`
+  - `npm install socket.io`
+  
+then `npm start` start the the application at `http://localhost:3000`  
+  
+<br/>
 
 **Credit:**
 
@@ -29,10 +32,10 @@ cloud hosting using Azure.
 
 [Based on thie website guide ](https://flexiple.com/react/build-a-powerful-chat-application-using-react-hooks/#section1)
 
-[How to use react - github](https://github.com/facebook/create-react-app)
+~~[How to use react - github](https://github.com/facebook/create-react-app)~~
 
 [CSS style landing page](https://codepen.io/ManalNasir/pen/gOLLvxM)
 
 [CSS style login page](https://speckyboy.com/login-pages-html5-css/)
 
-Link to Website: https://ezmessage.azurewebsites.net/
+**Link to Website: https://ezmessage.azurewebsites.net/**
