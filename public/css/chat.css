@@ -10,6 +10,26 @@ html {
   box-sizing: border-box;
 }
 
+/*  */
+
+#home-button {
+  position: absolute; 
+  top: 1%; 
+  left: 1%;
+  padding: 12px 15px;
+  margin: 10px;
+  background-color: rgba(0, 189, 94, 0.925);
+  border-radius: 5px;
+  font-size: 18px;
+	font-weight: 400;
+	font-family: Bahnschrift;
+
+}
+
+
+
+
+
 *,
 *:before,
 *:after {
