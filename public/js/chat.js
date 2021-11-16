@@ -1,4 +1,3 @@
-const socket = io('http://localhost:3000');
 const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
@@ -11,17 +10,6 @@ const BOT_MSGS = [
   "I feel sleepy! :("
 ];
 
-socket.on('msgerChat', data => {
-  appendMessage(`${data.name}: ${data.message}`)
-})
-
-socket.on('connection', (socket) => {
-  appendMessage('User is connected sucessfully')
-})
-
-socket.on('disconnect', () => {
-  appendMessage('Sorry! User is unfortunately disconnected')
-})
 
 
 // Icons made by Freepik from www.flaticon.com
@@ -34,38 +22,34 @@ msgerForm.addEventListener("submit", event => {
   event.preventDefault();
 
   const msgText = msgerInput.value;
-  //if (!msgText) return;
+  if (!msgText) return;
 
-  appendMessage(`You: ${message}`)
-  socket.emit('send-msgerChat', message)
+  appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
   msgerInput.value = ''
 
   botResponse();
 });
 
-function appendMessage(message) {
+function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
-  const msgHTML = document.createElement('div')
-  msgHTML.innerText = message
-  msgerChat.append(msgHTML)
+  const msgHTML = `
+  <div class="msg ${side}-msg">
+      <div class="msg-img" style="background-image: url(${img})"></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name">${name}</div>
+          <div class="msg-info-time">${formatDate(new Date())}</div>
+        </div>
+
+        <div class="msg-text">${text}</div>
+      </div>
+    </div>
+  `;
+
+  msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+  msgerChat.scrollTop += 500;
 }
-  //<div class="msg ${side}-msg">
-    //  <div class="msg-img" style="background-image: url(${img})"></div>
-
-      //<div class="msg-bubble">
-        //<div class="msg-info">
-          //<div class="msg-info-name">${name}</div>
-          //<div class="msg-info-time">${formatDate(new Date())}</div>
-        //</div>
-
-        //<div class="msg-text">${text}</div>
-      //</div>
-    //</div>
-  //`;
-
-  //msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-  //msgerChat.scrollTop += 500;
-//}
 
 function botResponse() {
   const r = random(0, BOT_MSGS.length - 1);
