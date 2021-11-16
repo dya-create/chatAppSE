@@ -1,4 +1,4 @@
-let socketIO = require('socket.io')
+const io = require('socket.io')(3000)
 
 const express = require('express')
 const expressHandlebars = require('express-handlebars')

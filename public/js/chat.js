@@ -1,4 +1,4 @@
-const socket = io;
+const socket = io('http://localhost:3000');
 const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
