@@ -14,7 +14,7 @@ const BOT_MSGS = [
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
 const BOT_NAME = "BOT";
-const PERSON_NAME = "Sajad";
+const PERSON_NAME = "EzMessageUser";
 
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();

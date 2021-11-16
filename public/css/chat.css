@@ -165,5 +165,11 @@ body {
 
 .msger-chat {
   background-color: #fcfcfe;
-  background-image: https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg ;
+  
+}
+
+.msger-time {
+	position: absolute;
+  font-size: 14px;
+   color: #f60;
 }
