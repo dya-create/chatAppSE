@@ -18,6 +18,7 @@ const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
 const BOT_NAME = "BOT";
 const PERSON_NAME = "EzMessageUser";
 
+
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();
 
@@ -29,6 +30,37 @@ msgerForm.addEventListener("submit", event => {
 
   botResponse();
 });
+
+window.onload = function() {
+
+  var form = document.getElementById('msgerForm');
+  var messageField = document.getElementById('msgerInput');
+  var messagesList = document.getElementById('msgerChat');
+  var socketStatus = document.getElementById('status');
+
+  var socket = new WebSocket('ws://echo.websocket.org');
+  socket.onopen = function(event) {
+    socketStatus.innerHTML = 'Connected to: ' + event.currentTarget.url;
+    socketStatus.className = 'open';
+
+    socket.send(data);
+    form.onsubmit = function(e) {
+      e.preventDefault();
+    
+      // Retrieve the message from the textarea.
+      var messageField = msgerInput.value;
+    
+      // Send the message through the WebSocket.
+      socket.send(msgerInput);
+    
+      // Add the message to the messages list.
+      msgerChat.innerHTML += '<li class="sent"><span>Sent:</span>' + message + '</li>';
+    
+      // Clear out the message field.
+      msgerInput.value = '';
+    
+      return false;
+
 
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
