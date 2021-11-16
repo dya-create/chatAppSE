@@ -1,9 +1,13 @@
-//let socketIO = require('socket.io')
+
 
 const express = require('express')
+const http = require("http");
 const expressHandlebars = require('express-handlebars')
 //const fire = require('firebase')
 const app = express()  
+const server = http.createServer(app);
+const socket = require("socket.io");
+const io = socket(server);
 
 app.use(express.static(__dirname + '/public'))
 
@@ -38,15 +42,22 @@ app.get('/chat', (req, res) => {
 })
 
 
-/*  
+
 io.on('connection', (socket) => {
+
+  // 
+  socket.emit("your id", socket.id);
+  socket.on("Send Message", body =>{
+    //send back to all connected clients
+    io.emit("message", body)
+  })
   console.log('User is connected sucessfully')
 
   socket.on('disconnect', () => {
     console.log('Sorry! User is unfortunately disconnected')
   })
 })
-*/
+
 
 
 //the port
