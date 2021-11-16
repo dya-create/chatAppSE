@@ -1,4 +1,4 @@
-//let socketIO = require('socket.io')
+let socketIO = require('socket.io')
 
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
@@ -37,15 +37,19 @@ app.get('/chat', (req, res) => {
   res.sendFile(__dirname + '/views/chat.html')
 })
 
-/*  
+
+  
 io.on('connection', (socket) => {
   console.log('User is connected sucessfully')
+})
   
+  socket.on('send-msgerChat', message => {
+    socket.broadcase.emit('msgerChat', { message: message, name: PERSON_NAME[socket.id] })
+  })
   socket.on('disconnect', () => {
     console.log('Sorry! User is unfortunately disconnected')
   })
-})
-*/
+
 
 
 
