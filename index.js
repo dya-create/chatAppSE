@@ -42,20 +42,20 @@ app.get('/chat', (req, res) => {
 })
 
 
-
+/*
 io.on("connection", (socket) => {
+  socket.emit("your id", socket.id);
+  socket.on("send message", body => {
+      io.emit("message", body)
+  })
 })
 
-socket.emit("your id", socket.id);
-socket.on("Send Message", body => {
-  io.emit('message', body)
-‍})
 console.log('User is connected successfully');
   
 socket.on("disconnect", () => {
     console.log('Sorry! User is unfortunately disconnected');
   })
-
+*/
 
 //the port
 app.listen(port, () => console.log(
