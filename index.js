@@ -7,7 +7,7 @@ const expressHandlebars = require('express-handlebars')
 const app = express()  
 const server = http.createServer(app);
 const socket = require("socket.io");
-const io = socket(server);
+const io = socketIO(server);
 
 app.use(express.static(__dirname + '/public'))
 
@@ -43,20 +43,18 @@ app.get('/chat', (req, res) => {
 
 
 
-io.on('connection', (socket) => {
-
-  // 
-  socket.emit("your id", socket.id);
-  socket.on("Send Message", body =>{
-    //send back to all connected clients
-    io.emit("message", body)
-  })
-  console.log('User is connected sucessfully')
-
-  socket.on('disconnect', () => {
-    console.log('Sorry! User is unfortunately disconnected')
-  })
+io.on("connection", (socket_io) => {
+  console.log('User is connected successfully');
+  socket_IO.emit("connection", null);
 })
+
+socketIO.on('send-message', msg => {
+  io.emit('message', msg);
+‍})
+
+  socket_io.on("disconnect", () => {
+    console.log('Sorry! User is unfortunately disconnected');
+  })
 
 
 

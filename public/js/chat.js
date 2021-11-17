@@ -2,9 +2,11 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
-import React ,{useState, useEffect,useRef} from "react";
+import React from 'react';
 import styled from "styled-components";
-import io from "socket.io-client";
+import socketClient from "socket.io-client";
+
+    
 
 const BOT_MSGS = [
   "Hi, how are you?"
@@ -31,7 +33,51 @@ msgerForm.addEventListener("submit", event => {
   botResponse();
 });
 
-window.onload = function() {
+
+
+/*var socket = io.connect()
+function addMessage(data, isSelf = false){
+  const messageElement = document.createElement('div')
+  messageElement.classList.add('message')
+
+  if (isSelf) {
+    messageElement.classList.add('self-message')
+    messageElement.innerText = `${data.message}`
+  } else {
+    if (data.user === 'server'){
+      messageElement.innerText = `${data.message}`
+    } else {
+      messageElement.classList.add('BOT')
+      messageElement.innerText = `${data.BOT}:${data.message}`
+    }
+  }
+  const msgerChat = document.getElementById('msgerChat')
+  msgerChat.append(messageElement)
+}
+
+const msgerForm = document.getElementById('msgerForm')
+
+msgerForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const msgerInput = document.getElementById('msgerInput')
+  if (msgerInput.value !== '') {
+    let newMessage = msgerInput.value
+    socket.emit('new-message', { user: socket.id, message: newMessage })
+    addMessage({ message: newMessage }, true)
+    msgerInput.value = ''
+  } else {
+    msgerInput.classList.add('error')
+  }
+})
+
+socket.on('botResponse', (data) => {
+  console.log('botResponse event >> ', data)
+  addMessage(data, false)
+})/*
+
+
+
+/*window.onload = function() {
 
   var form = document.getElementById('msgerForm');
   var messageField = document.getElementById('msgerInput');
@@ -59,7 +105,7 @@ window.onload = function() {
       // Clear out the message field.
       msgerInput.value = '';
     
-      return false;
+      return false;/*
 
 /*
 const App = ()=>{
