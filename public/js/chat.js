@@ -2,16 +2,14 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from "styled-components";
-import socketClient from "socket.io-client";
-
+import io from "socket.io-client";
 
 
 const BOT_MSGS = [
   "Hi, how are you?"
 ];
-
 
 
 // Icons made by Freepik from www.flaticon.com
