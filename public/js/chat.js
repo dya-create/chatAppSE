@@ -2,12 +2,12 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
+import React ,{useState, useEffect,useRef} from "react";
+import styled from "styled-components";
+import io from "socket.io-client";
+
 const BOT_MSGS = [
-  "Hi, how are you?",
-  "Ohh... I can't understand what you trying to say. Sorry!",
-  "I like to play games... But I don't know how to play!",
-  "Sorry if my answers are not relevant. :))",
-  "I feel sleepy! :("
+  "Hi, how are you?"
 ];
 
 
@@ -38,7 +38,7 @@ window.onload = function() {
   var messagesList = document.getElementById('msgerChat');
   var socketStatus = document.getElementById('status');
 
-  var socket = new WebSocket('ws://echo.websocket.org');
+  var socket = new WebSocket();
   socket.onopen = function(event) {
     socketStatus.innerHTML = 'Connected to: ' + event.currentTarget.url;
     socketStatus.className = 'open';
@@ -61,6 +61,62 @@ window.onload = function() {
     
       return false;
 
+/*
+const App = ()=>{
+  const [yourID, setYourId] = useState();
+  const [messages, setMessages] = useState([]);
+  const [message, setMessage] = userState("");
+
+  const socketRef = useRef();
+
+  useEffect(()=>{
+
+  socketRef.current = io.connect('/');
+  
+  socketRef.current.on("your id", id => {
+    setYourId(id);
+  })
+
+  socketRef.current.on("message", (message)=>{
+
+  })
+});
+
+function receivedMessage (message){
+  setMessages(oldMsgs => [...oldMsgs, message]);
+}
+
+function sendMessage(e){
+  e.preventDefault();
+  const messageObject = {
+    body: message,
+    id: yourID,
+
+  };
+  setMessage("");
+  socketRef.current.emit("send Message", mmessageObject);
+}
+
+function handleChange(e){
+  setMessage(e.target.value);
+}
+
+return(
+  <Page>
+    <Container>
+      {messages.mao((message,index)=>
+      if)}
+
+    </Container>
+  </Page>
+)
+
+
+
+};
+
+
+*/
 
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps

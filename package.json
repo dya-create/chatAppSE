@@ -1,6 +1,7 @@
 {
     "name": "ez_message",
     "version": "1.0.0",
+    "proxy": "http://localhost:3000",
     "description": "Names: Steve, Diya, Paula, Adrian, Mariela",
     "main": "index.js",
     "scripts": {
