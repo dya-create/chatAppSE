@@ -4,7 +4,8 @@
     "description": "Names: Steve, Diya, Paula, Adrian, Mariela",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "dev": "nodemon index.js",
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
@@ -21,7 +22,9 @@
         "express": "^4.17.1",
         "express-handlebars": "^5.3.4",
         "firebase": "^9.4.1",
-        "nodemon": "^2.0.14",
-        "socket.io": "^4.3.1"
+        "socket.io": "^4.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
     }
 }

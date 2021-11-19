@@ -1,10 +1,19 @@
-//let socketIO = require('socket.io')
 
 const express = require('express')
-const expressHandlebars = require('express-handlebars')
-//const fire = require('firebase')
-const app = express()  
+const app = express()
 
+//this part mean that socket is running on its own localserver
+//on port 3030 and thte cors is say yes to share resoures
+const io = require('socket.io')(3030,{cors: {origin: true}})
+
+const expressHandlebars = require('express-handlebars')
+const webroute = require('./webroutes') // made file just for webroutes 
+
+
+
+
+
+//
 app.use(express.static(__dirname + '/public'))
 
 app.engine('handlebars', expressHandlebars({
@@ -16,40 +25,36 @@ app.set("views", './views')
 
 const port = process.env.PORT || 3000;
 
-//web routes //
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/homepage.html')
-})
+// webroutes contral
+app.use('/', webroute)
 
-app.get('/credits', (req, res) => {
-  res.sendFile(__dirname + '/views/credits.html')
-})
-
-app.get('/login', (req, res) => {
-  res.sendFile(__dirname + '/views/login.html')
-})
-
-app.get('/signup', (req, res) => {
-  res.sendFile(__dirname + '/views/signup.html')
-})
-
-app.get('/chat', (req, res) => {
-  res.sendFile(__dirname + '/views/chat.html')
-})
-
-
-/*  
+// web-sockect stuff, will need to put another file
+const users = {}
 io.on('connection', (socket) => {
-  console.log('User is connected sucessfully')
+  socket.on('new-user', username => {
+    users[socket.id] = username
+    socket.broadcast.emit('user-connected', username)
+  })
+  //console.log('a user connected');
+  //socket.emit('chat-message', 'hello word')//sending test to users
+
+  socket.on('send-chat-message', message => {
+    //console.log(message)
+    socket.broadcast.emit('chat-message', {message: message, username: users[socket.id]  })
+  })
 
   socket.on('disconnect', () => {
-    console.log('Sorry! User is unfortunately disconnected')
-  })
+    //console.log('user disconnected');
+    socket.broadcast.emit('user-disconnected', users[socket.id])
+    delete users[socket.id]
+
+  });
 })
-*/
+
+
 
 
 //the port
 app.listen(port, () => console.log(
   `Express started on http://localhost:${port}` +
-  `press Ctrl-C to terminate.`));
+  ` press Ctrl-C to terminate.`));

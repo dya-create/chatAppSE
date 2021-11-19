@@ -5,12 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chat Window</title>
+
   <link rel="stylesheet" href="/css/chat.css">
-  <script src="/js/chat.js"></script>
+  <script defer src="/js/chat.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="/emoji/emojionearea.min.css">
+  <script type="text/javascript" src="/emoji/emojionearea.min.js"></script>
+  <script type="text/javascript" src="/emoji/emojis.js"></script>
+
+
 </head>
 
 <body>
-  <button id="home-button"  onclick="window.location.href='/'">Home</button>
+  <button id="home-button" onclick="window.location.href='/'">Home</button>
 
   <section class="msger">
 
@@ -25,7 +36,7 @@
 
     <main class="msger-chat">
       <div class="msg left-msg">
-        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)">
+        <div class="msg-img" style="background-image: url(/img/icon-robot.jpg)">
 
         </div>
 
@@ -42,7 +53,7 @@
       </div>
 
       <div class="msg right-msg">
-        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"></div>
+        <div class="msg-img" style="background-image: url(/img/icon-person.jpg)"></div>
 
         <div class="msg-bubble">
           <div class="msg-info">
@@ -58,7 +69,9 @@
     </main>
 
     <form class="msger-inputarea">
-      <input type="text" class="msger-input" placeholder="Enter your message...">
+      <textarea class="msger-input" id="text-input"></textarea>
+      
+      
       <button type="submit" class="msger-send-btn">Send</button>
     </form>
 
