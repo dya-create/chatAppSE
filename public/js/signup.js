@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 .auth()
                 .createUserWithEmailAndPassword(login, password)
                 .then(({ user }) => {
-                    window.location.assign("/chat");
+                    window.location.assign("/chatpage");
 
                 }, reason => {
                     //rejection

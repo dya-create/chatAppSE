@@ -21,10 +21,6 @@ app.get('/signup', (req, res) => {
     res.sendFile(__dirname + '/views/signup.html')
 })
 
-app.get('/chat', (req, res) => {
-    res.sendFile(__dirname + '/views/chat.html')
-})
-
 app.get('/chatpage', (req, res) => {
     res.sendFile(__dirname + '/views/chatpage.html')
 })
