@@ -1,4 +1,3 @@
-
 const express = require('express')
 const app = express()
 
@@ -8,9 +7,6 @@ const io = require('socket.io')(3030,{cors: {origin: true}})
 
 const expressHandlebars = require('express-handlebars')
 const webroute = require('./webroutes') // made file just for webroutes 
-
-
-
 
 
 //
@@ -49,8 +45,7 @@ io.on('connection', (socket) => {
     delete users[socket.id]
 
   });
-})
-
+})//end of socket stuff
 
 
 
