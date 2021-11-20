@@ -16,13 +16,14 @@ cloud hosting using Azure.
 
 **Needed dependance/files:**
 - node.js/express.js
-- ~~react~~
+- 
 - `npm install` will install this:
   - `npm install express --save`    
   - `npm install express-handlebars`
   - `npm install socket.io`
   
-then `npm start` start the the application at `http://localhost:3000`  
+  
+then do `npm start` in the root dir to start the application at `http://localhost:3000`  
   
 <br/>
 
