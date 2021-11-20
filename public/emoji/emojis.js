@@ -6,8 +6,11 @@
 $(document).ready(function() {
   $("#text-input").emojioneArea({
 
-    // i canadd more props here 
-    pickerPosition: 'bottom'
+    // i can add more props here 
+    pickerPosition: 'bottom',
+    placeholder: "Enter something...",
+    buttonTitle: "Use the TAB key to insert emoji faster",
+  
     
   });
 

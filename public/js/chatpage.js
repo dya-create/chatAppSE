@@ -30,7 +30,8 @@ messageForm.addEventListener('submit', e => {
     const message = messageInput.value//
     appendMessage('you: ' + message)
     socket.emit('send-chat-message', message)
-    messageInput.value = ''
+    messageInput.value = ""
+    
 
 })
 
