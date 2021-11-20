@@ -6,6 +6,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon index.js",
+        "install-dep": "concurrently \"cd server-socket && npm install\" \"cd client-socket && npm install\" \"npm install\"",
         "start": " concurrently \"cd server-socket && npm start\" \"cd client-socket && npm start\" \"nodemon index.js\" "
     },
     "repository": {
