@@ -26,14 +26,12 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      - name: Zip artifact for deployment
-        run: Compress-Archive . release.zip 
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: release.zip
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,8 +45,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
-      - name: unzip artifact for deployment
-        run: unzip release.zip
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -56,5 +52,5 @@ jobs:
         with:
           app-name: 'ezmessage'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B1A2C3BE56674D2F9C818FA3DA95EA0C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4F81ABE86FB04C7691389B4C05AEE3FB }}
           package: .
