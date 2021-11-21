@@ -5,8 +5,12 @@
 //this part mean that socket is running on its own localserver
 //on port 3030 and thte cors is say yes to share resoures
 
-//might what to change the cros to the web port that is goin to access 
-const io = require('socket.io')(3030,{cors: {origin: true}})
+//to test when running  http://localhost:3030/socket.io/socket.io.js
+const io = require('socket.io')(3030, {
+  cors: {
+    origin: ['https://localhost:8080'],
+  },
+})
 
 
 // web-sockect stuff, will need to put another file
@@ -21,7 +25,7 @@ io.on('connection', (socket) => {
 
   socket.on('send-chat-message', message => {
     //console.log(message)
-    socket.broadcast.emit('chat-message', {message: message, username: users[socket.id]  })
+    socket.broadcast.emit('chat-message', { message: message, username: users[socket.id] })
   })
 
   socket.on('disconnect', () => {
