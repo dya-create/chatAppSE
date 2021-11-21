@@ -17,10 +17,12 @@
     <script type="text/javascript" src="/emoji/emojionearea.min.js"></script>
     <script type="text/javascript" src="/emoji/emojis.js"></script>
 
-    <!-- for the socket.io -->
-    <!-- <script defer src="http://localhost:3030/socket.io/socket.io.js"></script> -->
-    <!-- <script defer src="/js/chatpage.js"></script> -->
-    <script type="module" src="http://localhost:8080/client-socket.js"></script> 
+    <!-- for socket.io client side -->
+
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+        integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+        crossorigin="anonymous"></script>
+    <script type="module" src="/js/client-socket.js"></script>
 
 </head>
 
@@ -37,8 +39,6 @@
 
         <button type="submit" id="send-button">Send</button>
     </form>
-
-
 
 </body>
 

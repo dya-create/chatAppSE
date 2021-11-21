@@ -1,19 +1,16 @@
-// will use this to refacto the code for socket
 // https://github.com/WebDevSimplified/Realtime-Simple-Chat-App/blob/master/script.js
 
-
 //this part mean that socket is running on its own localserver
-//on port 3030 and thte cors is say yes to share resoures
 
 //to test when running  http://localhost:3030/socket.io/socket.io.js
 const io = require('socket.io')(3030, {
   cors: {
-    origin: ['https://localhost:8080'],
+    origin: true,
+    methods: ["GET", "POST"]
   },
 })
 
 
-// web-sockect stuff, will need to put another file
 const users = {}
 io.on('connection', (socket) => {
   socket.on('new-user', username => {
@@ -34,4 +31,4 @@ io.on('connection', (socket) => {
     delete users[socket.id]
 
   });
-})//end of socket stuff
+})

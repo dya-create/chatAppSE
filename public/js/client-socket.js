@@ -1,4 +1,8 @@
+
 //user side code to send text message
+//import { io } from '/socket.io-client'
+// using CDN to get the socket.io-client files
+
 var socket = io("http://localhost:3030");
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('form-data')
@@ -24,14 +28,12 @@ socket.on('user-disconnected', username => {
 })
 
 
-
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value//
     appendMessage('you: ' + message)
     socket.emit('send-chat-message', message)
-    messageInput.value = ""
-    
+    messageInput.value = ''
 
 })
 
