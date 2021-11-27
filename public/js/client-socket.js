@@ -1,9 +1,10 @@
 
-//user side code to send text message
-//import { io } from '/socket.io-client'
 // using CDN to get the socket.io-client files
 
-var socket = io("http://localhost:3030");
+//conncecting to socket server - adrian made the server
+var socket = io("https://serversocket.azurewebsites.net", {withCredentials: true}); 
+//var socket = io("http://localhost:3030", {withCredentials: true}); 
+// use  when run socker-server locally 
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('form-data')
 const messageInput = document.getElementById('text-input')
@@ -26,7 +27,6 @@ socket.on('user-connected', username => {
 socket.on('user-disconnected', username => {
     appendMessage( username + ' has disconnected to the chat')
 })
-
 
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
