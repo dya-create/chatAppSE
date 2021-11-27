@@ -16,11 +16,10 @@ cloud hosting using Azure.
 
 **Needed dependance/files:**
 - node.js/express.js
-- 
 - `npm install` will install this:
-  - `npm install express --save`    
+  - `npm install express`    
   - `npm install express-handlebars`
-  - `npm install socket.io`
+  - `npm i firebase`
   
   
 then do `npm start` in the root dir to start the application at `http://localhost:3000`  
@@ -30,6 +29,8 @@ then do `npm start` in the root dir to start the application at `http://localhos
 **Credit:**
 
 [Using socket.io commucation API](https://socket.io/)
+- the server-side of socket-io is host here https://serversocket.azurewebsites.net
+- the repo: https://github.com/7pereza/server-socker this uses azure to host it 
 
 [Based on thie website guide ](https://flexiple.com/react/build-a-powerful-chat-application-using-react-hooks/#section1)
 
