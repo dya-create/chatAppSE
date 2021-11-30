@@ -88,8 +88,7 @@ function googleSign() {
             var user = result.user;
             // ...
         }).then(()=>{
-            window.location.assign("/chatpage");
-
+            window.location.assign("/chatpage")
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
@@ -98,7 +97,7 @@ function googleSign() {
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
-            // ...
+            console.log(errorCode, errorMessage, email, credential)
         });
 
 }
