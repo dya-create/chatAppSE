@@ -9,6 +9,8 @@ const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('form-data')
 const messageInput = document.getElementById('text-input')
 
+
+
 //assk userfor name to display
 const username = prompt("what is your name")
 appendMessage("you joined!")
