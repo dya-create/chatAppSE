@@ -15,7 +15,7 @@ body {
   padding: 0.5rem;
   overflow: scroll;
 }
-#messageForm {
+#message-Form {
   width: 80%;
   position: absolute;
   bottom: 10px;
