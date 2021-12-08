@@ -57,3 +57,11 @@ body {
   background-color: aqua;
   text-align: left;
 }
+
+.dropdown-toggle::before{
+  display:nonee !important;
+} 
+
+.dropdown-toggle::after {
+  display: none !important;
+}

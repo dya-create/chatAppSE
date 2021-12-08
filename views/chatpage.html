@@ -9,6 +9,7 @@
     <title>chat-page</title>
 
     <link rel="stylesheet" href="/css/chatpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     
 
@@ -32,8 +33,6 @@
 <body>
     <button onclick="window.location.href='/'">Home</button>
 
- 
-
     <h1 class="center" >EZMessage</h1>
     
     <div id="message-container"></div>
@@ -44,9 +43,15 @@
     <input class ="input center" id="text-input" value="" >
 
     <button class="btn" type="submit" id="send-button">Send</button>
+
+    <input type="file" id="imgupload" style="display:none"/>
     </form>
+    <button id="OpenImgUpload" > Image Upload</button>
 </div>
     
+<script>
+    $('#OpenImgUpload').click(function(){ 
+        $('#imgupload').trigger('click'); });</script>
 
 </body>
 
