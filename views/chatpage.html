@@ -32,7 +32,7 @@
 
 <body>
 
-    <button class="btn" onclick="myFunction()">Dark mode</button> 
+    <button class="btn" >Dark mode</button> 
     <button class ="btn" onclick="window.location.href='/'">Home</button>
        
     
@@ -50,12 +50,14 @@
     <button class="btn" type="submit" id="send-button">Send</button>
     
 
-    <input type="file" id="imgupload" style="display:none"/>
+    <input type="file"  accept=".jpg, .jped, .png" id="imgupload" style="display:none"/>
     </form>
     <button id="OpenImgUpload" > Image Upload</button>
 </div>
     
 <script>
+
+
 
 function myFunction() {
    var element = document.body;
