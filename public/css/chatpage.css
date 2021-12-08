@@ -5,6 +5,11 @@ body {
   font-size: larger;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 #message-container {
   height: 75vh;
   border: 1px solid #e095fd;

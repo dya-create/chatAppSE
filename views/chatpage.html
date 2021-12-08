@@ -31,11 +31,16 @@
 
 
 <body>
-    <button onclick="window.location.href='/'">Home</button>
+
+    <button class="btn" onclick="myFunction()">Dark mode</button> 
+    <button class ="btn" onclick="window.location.href='/'">Home</button>
+       
+    
 
     <h1 class="center" >EZMessage</h1>
     
     <div id="message-container"></div>
+   
 
     <div class="center">
     <form id="form-data">
@@ -43,6 +48,7 @@
     <input class ="input center" id="text-input" value="" >
 
     <button class="btn" type="submit" id="send-button">Send</button>
+    
 
     <input type="file" id="imgupload" style="display:none"/>
     </form>
@@ -50,6 +56,11 @@
 </div>
     
 <script>
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");}
+
     $('#OpenImgUpload').click(function(){ 
         $('#imgupload').trigger('click'); });</script>
 
