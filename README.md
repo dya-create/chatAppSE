@@ -33,6 +33,7 @@ then do `npm start` in the root dir to start the application at `http://localhos
 - the repo: https://github.com/7pereza/server-socker this uses azure to host it 
 
 [Based on thie website guide ](https://flexiple.com/react/build-a-powerful-chat-application-using-react-hooks/#section1)
+[git repo for intext emoji](https://github.com/mervick/emojionearea)
 
 ~~[How to use react - github](https://github.com/facebook/create-react-app)~~
 
