@@ -32,7 +32,7 @@
 
 <body>
 
-    <button class="btn" >Dark mode</button> 
+    <button class="btn" onclick="myFunction()" >Dark mode</button> 
     <button class ="btn" onclick="window.location.href='/'">Home</button>
        
     
@@ -59,7 +59,8 @@
 
 function myFunction() {
    var element = document.body;
-   element.classList.toggle("dark-mode");}
+   element.classList.toggle("dark-mode");
+}
 
     $('#OpenImgUpload').click(function(){ 
         $('#imgupload').trigger('click'); });</script>
